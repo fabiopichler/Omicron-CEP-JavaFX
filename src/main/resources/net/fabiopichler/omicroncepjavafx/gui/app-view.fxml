@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListView?>
+
+<VBox spacing="8.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="net.fabiopichler.omicroncepjavafx.gui.AppController">
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+    </padding>
+
+    <HBox alignment="CENTER" spacing="8.0">
+        <TextField
+                fx:id="cepTextField"
+                onAction="#onTextFieldAction"
+        />
+
+        <Button
+                text="Pesquisar"
+                onAction="#onSearchButtonClick"
+        />
+    </HBox>
+
+    <VBox styleClass="cep-content-box">
+        <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+        </padding>
+
+        <HBox>
+            <Label
+                    text="CEP: "
+                    styleClass="cep-title"
+            />
+
+            <Label
+                    fx:id="cepLabel"
+                    text="_____-___"
+                    styleClass="cep-title"
+            />
+        </HBox>
+
+        <HBox>
+            <Label
+                    text="Logradouro: "
+                    styleClass="cep-text"
+            />
+
+            <Label
+                    fx:id="logradouroLabel"
+                    text="___"
+                    styleClass="cep-content"
+            />
+        </HBox>
+
+        <HBox>
+            <Label
+                    text="Bairro: "
+                    styleClass="cep-text"
+            />
+
+            <Label
+                    fx:id="bairroLabel"
+                    text="___"
+                    styleClass="cep-content"
+            />
+        </HBox>
+
+        <HBox>
+            <Label
+                    text="Cidade: "
+                    styleClass="cep-text"
+            />
+
+            <Label
+                    fx:id="localidadeLabel"
+                    text="___"
+                    styleClass="cep-content"
+            />
+
+            <Label text="/"/>
+
+            <Label
+                    fx:id="ufLabel"
+                    text="___"
+                    styleClass="cep-content"
+            />
+        </HBox>
+    </VBox>
+
+    <VBox spacing="5.0">
+        <VBox>
+            <Label
+                    text="Histórico de pesquisas"
+                    styleClass="cep-title"
+            />
+
+            <Label
+                    text="Lista das últimas pesquisas realizadas"
+            />
+        </VBox>
+
+        <ListView fx:id="listView"/>
+    </VBox>
+</VBox>

@@ -2,6 +2,8 @@
 
 Programa simples para consultar CEPs, escrito em Java com JavaFX.
 
+**Nota:** Programa desenvolvido apenas para estudos com Java.
+
 ## Informações
 
 Desenvolvido com:
